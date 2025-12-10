@@ -1,0 +1,102 @@
+{
+  "users": [
+    {
+      "id": "user_1",
+      "name": "Alice Admin",
+      "email": "alice@example.com",
+      "avatar": "",
+      "roles": [
+        "admin"
+      ],
+      "accounts": [
+        {
+          "provider": "google",
+          "providerAccountId": "111111"
+        }
+      ],
+      "createdAt": "2025-12-10T00:00:00Z"
+    },
+    {
+      "id": "Jl6xtDmYt9JFWayVoG4Io",
+      "email": "hk33636625@gmail.com",
+      "name": "Huzaifa Khan",
+      "image": "https://avatars.githubusercontent.com/u/148506754?v=4",
+      "roles": [
+        "viewer"
+      ],
+      "accounts": [
+        {
+          "provider": "github",
+          "providerAccountId": "148506754"
+        }
+      ],
+      "createdAt": "2025-12-10T18:19:59.973Z"
+    },
+    {
+      "id": "7KnwRCwkyPgkLVZ-w4eth",
+      "email": "farzain.khan007@gmail.com",
+      "name": "Farzain khan",
+      "image": "https://avatars.githubusercontent.com/u/154374247?v=4",
+      "roles": [
+        "editor"
+      ],
+      "accounts": [
+        {
+          "provider": "github",
+          "providerAccountId": "154374247"
+        }
+      ],
+      "createdAt": "2025-12-10T19:40:29.234Z"
+    },
+    {
+      "id": "SoSRTfRKwLAI3kHFyql9x",
+      "email": "sk5908774@gmail.com",
+      "name": "Saad Khan",
+      "image": "https://lh3.googleusercontent.com/a/ACg8ocJRtuFHWamy9qwZkih-ofdDjflYSbE6W0hK6VJPJ8yKDnQQ-z3PXA=s96-c",
+      "roles": [
+        "editor"
+      ],
+      "accounts": [
+        {
+          "provider": "google",
+          "providerAccountId": "118338091367947708205"
+        },
+        {
+          "provider": "github",
+          "providerAccountId": "107142961"
+        }
+      ],
+      "createdAt": "2025-12-10T21:53:56.595Z"
+    }
+  ],
+  "roles": [
+    {
+      "id": "admin",
+      "name": "Admin",
+      "permissions": [
+        "manage_users",
+        "view_admin",
+        "edit_content",
+        "delete_content"
+      ]
+    },
+    {
+      "id": "editor",
+      "name": "Editor",
+      "permissions": [
+        "edit_content",
+        "view_editor"
+      ]
+    },
+    {
+      "id": "viewer",
+      "name": "Viewer",
+      "permissions": [
+        "view_content",
+        "edit_content"
+      ]
+    }
+  ],
+  "permissions": [],
+  "deletedEmails": []
+}

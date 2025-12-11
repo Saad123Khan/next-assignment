@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Here is a **short and clean README** for your project:
 
-## Getting Started
+---
 
-First, run the development server:
+# 🚀 Next.js Authentication System
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This project uses **Next.js (App Router)** with **NextAuth.js** for secure authentication and role-based access.
+
+---
+
+## 🔑 Features
+
+* Google Login
+* GitHub Login
+* Role-Based Access (Admin/User)
+* Protected Routes
+* JWT Sessions
+* NextAuth Backend (Route Handlers)
+
+---
+
+## 📂 Structure
+
+```
+/app/api/auth/[...nextauth]/route.js   → NextAuth backend
+/app/dashboard                         → User protected pages
+/app/admin                             → Admin-only pages
+/lib/auth.js                           → NextAuth config
+middleware.js                          → Route protection
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🔐 Auth Flow
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. User logs in via Google or GitHub
+2. NextAuth returns user profile
+3. User is saved/fetched from DB
+4. Role is added to JWT & session
+5. Admin/User pages are protected using middleware
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ⚙️ Setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Install:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+npm install
+```
 
-## Deploy on Vercel
+### Environment Variables (`.env.local`):
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your_secret_key
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+GOOGLE_CLIENT_ID=xxxx
+GOOGLE_CLIENT_SECRET=xxxx
+
+GITHUB_CLIENT_ID=xxxx
+GITHUB_CLIENT_SECRET=xxxx
+```
+
+### Run:
+
+npm run dev
+
